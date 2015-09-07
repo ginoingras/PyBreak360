@@ -1,0 +1,110 @@
+pybreak360, an arkanoid breakout multi player network game at 360!
+
+Download: http://sourceforge.net/projects/pybreak360/
+or https://code.google.com/p/pybreak360-arkanoid-breakout-multi-player-network-game/
+
+videos:
+v1.0.4 : https://www.youtube.com/watch?v=TYGZ4Va3JOo
+v1.0.3 : http://youtu.be/mQbBKgUXdf0
+v1.0.2 : http://youtu.be/8fNMpSOV_RI
+v1.0.1 : https://www.youtube.com/watch?v=O2ysNwVeF0M
+
+######################
+I have not found anything playing with more than 2 childrens with serverals computers.
+An addictive game, easy, and not too long playing time.
+So, i made it: an arkanoid / breakout clone which have the particularity to play at 360°.
+
+see pybreak360.cfg to fine configure outside game.
+
+game use mouse or LEFT, RIGHT, UP, DOWN.
+on game, press SPACE or ENTER for menu.
+select level pack using menu/F9.
+see in levels/*.level to edit/create your own level.
+each level can be fine configured as speed ball, bricks quantity, width spaced, shifted, ...
+press PAGE_UP, PAGE_DOWN to change level in actual level pack.
+
+you can play alone, with ComputerBootPlayer, or humans muliplayers.
+connect up to 4 players via TCP network.
+press B to start/stop ComputerBootPlayer.
+press H to see HiScores.
+press D for level designer.
+select Server using menu/F1, connect/disconnect using menu/F10.
+
+you can't play (yet) several players on the same computer.
+it was not the 1st objective.
+
+A good gameplay experience, 10 bricks bonus, more then 90 levels, ...
+I hope you'll have as much fun playing it that i got programing (and playing it) also.
+
+######################
+How to contribute:
+send your levelpack at ginoingras@gmail.com
+
+check "FIXME:" in code
+check "WARNING:" in code
+check "TODO:" in code
+
+i apologize that code certainly doesn't Pythonic (1st release only in 4 weeks).
+some comments are already fixed or outdated/incoherente...
+i have to clean it (a lot).
+
+report bug at ginoingras@gmail.com
+
+game tested on linux, winXP, Seven.
+published on pygame.org, codes-sources, sourceforge.net.
+published on https://code.google.com/p/pybreak360/
+
+######################
+TODO / know issues:
+Game:
+allow all 4 players on same (maybe screen?) server, use keys in pybreak360.cfg: AZES, IOPL, 4562.
+
+More:
+modify/enhance menu (needed add for android: B,H,D,PGUP-PGDWN)
+modify levelEditor to change BricksArray size.
+add autocheck updates function at launch.
+add brick bonus invisible ball, timed 3 sec (sprite already exist).
+add ball lazer trajectory help BrickBonus (may or not shown only on ballowner screen display?).
+add 2nd (and more) ball brick bonus.
+add invisible brick (No8? status? as bonus?).
+allows bonus bricks to be hiden by normal bricks.
+send text messages in menu mode between clients (chat).
+adapt locking mouse radius-perimeter when changing screen size.almost correct.
+show players connected in real time in menu mode (actually only entering mode).
+enhance bats (and bricks?) design.
+enhance AI ComputerBoot.
+
+Code:
+rename sounds explicitly.
+translate comments in code to be completly english.
+clean terminal debug, use logfile, use verbose level 1,2,3...
+change players bats in objects class elements.
+extract network class in file to import.
+compatibility with Python3
+support for android
+create an .deb or setup.py, pip for linux (DONE: and exe file for windows.)
+
+
+WARNING:
+BigBall 32pix isn't Rect centered (and certainly normal ball 17pix too)
+change local server ip F11 may have no th_E/R/SerCli issues when reconnect
+multiplayers not playing all sounds (start/lose ball event is on server only) in clients network.
+too much multiplayers sounds?
+menu mode have to pause others players in network game.
+start and end game, display final score, (may enhance, not satisfy) check synchonus with multiplayers clients.
+
+communication network work well but is not optimized (specially for windows clients).
+some traffic only need to tarjet one client (penality time, ...)
+add "continue" when possible on th_recive and th_ServerClient
+somes differences between Linux and MsWindows (as Win need to send \n when something recived to be responsive).
+check if better that ball/bullet client which impact have to wait his status from server?
+REFLEXION:
+?
+
+FIXME:
+Nothing emergency else?
+
+#####################
+DONE/FIXED:
+see RELEASES or readme.txt file
+...
